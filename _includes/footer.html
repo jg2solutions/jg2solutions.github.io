@@ -1,0 +1,67 @@
+<div class="contact-agile" id="contact">
+<div class="container">
+	<h3 class="tittle">Contato</h3>
+	
+	<div class="contact-middle">
+		<form action="#" method="post">
+		<div class="form-agileinfo">
+			<p>Nome</p>
+			<input type="text" name="your name" placeholder="Seu nome" required="" />
+			<p>E-mail</p>
+			<input type="email" name="your email" placeholder="Seu melhor e-mail" required="" />
+		</div>
+		<div class="form-agileits-w3layouts">
+		<p>Mensagem</p>
+			<textarea  name="your message" placeholder="Conta pra gente do que você precisa =)" required="" ></textarea>
+				<input type="submit"   value="Enviar mensagem">
+		</div>
+		<div class="clearfix"></div>
+		</form>
+	</div>
+</div>
+</div>
+<div class="col-md-8 footer-w3layouts">
+<div class="footer-top-agile">
+<h2><a href="index.html">{{ site.title }}</a></h2>
+<div class="footer-contact-w3ls">
+<p class="num-w3ls">+55 (33) 3021 6384</p>
+<p class="email-w3l">Skype: <a >janynne.gomes</a></p>
+<p class="email-w3l">Skype: <a >joelgarciajr84</a></p>
+</div>
+<div class="clearfix"></div>
+</div>
+
+{% assign page_paths = site.header_pages | default: default_paths %}
+
+		   
+
+<div class="footer-bottom-wthree">
+<div class="nav-footer-w3l">
+	<a href="#home" class="scroll">Home</a>
+	<a href="#services" class="scroll">Services</a>
+	<a href="#about" class="scroll">About</a>
+	<a href="#adopt" class="scroll">Adoption</a>
+	<a href="#contact" class="scroll">Contact</a>
+
+	{% for path in page_paths %}
+	{% assign my_page = site.pages | where: "path", path | first %}
+	{% if my_page.title %}
+	<a  href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+	{% endif %}
+	{% endfor %}			</div>
+
+<div class="footer-button"><a href="#contact" class="scroll">Entrar em contato</a></div>
+<div class="clearfix"></div>
+</div>
+</div>
+<div class=" col-md-4 map-w3ls">
+<div class="address-agileinfo">
+<h6 class="subheading-w3ls two">Endereço</h6>
+<p>Governador Valadares, MG. Brasil.</p>
+</div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6209.852593501853!2d-77.0416869731965!3d38.902800718279195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xae69b9ad9dbd5ebf!2sRenaissance+Washington%2C+DC+Dupont+Circle+Hotel!5e0!3m2!1sen!2sin!4v1479208161830"></iframe>
+</div>
+<div class="clearfix"></div>
+<div class="copy">
+    <p>© 2017 Todos os direitos reservados</p>
+</div>

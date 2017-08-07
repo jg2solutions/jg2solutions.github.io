@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+<body class="cbp-spmenu-push" id="home">
+  <!-- Banner -->
+        <div id="house" class="top-header">
+				<div class="col-md-6 logo-w3l w32">
+					<h1 class="location"><a href="index.html">{{ site.title }}</a></h1>
+				</div>
+				<div class="col-md-6 logo-w3l w31 sea">
+					<div class="right-w3l">
+						<ul class="top-links">
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+						</ul>
+					</div>
+						<div class="w3ls_search">
+				<div class="cd-main-header">
+					<ul class="cd-header-buttons">
+						<li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li>
+					</ul> <!-- cd-header-buttons -->
+				</div>
+				<div id="cd-search" class="cd-search">
+					<form action="#" method="post">
+						<input name="Search" type="search" placeholder="Click enter after typing">
+					</form>
+				</div>
+			</div>
+				</div>
+				<div class="clearfix"></div>
+		</div>
+		<!--bottom-->
+		<div class="button">
+			<button id="showLeftPush"><img src="assets/images/menu.png" alt=""></button>
+		</div>
+		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+			<h3>Menu</h3>
+				<a href="#home" class="scroll">Home</a>
+						<a href="#services" class="scroll">Services</a>
+						<a href="#adopt" class="scroll">Adoption</a>
+					    <a href="#team" class="scroll">Team</a>
+						<a href="#gallery" class="scroll">Gallery</a>
+						<a href="#contact" class="scroll">Contact Us</a>
+
+						{% for post in site.posts %}
+						<a href="{{ post.url | relative_url }}" class="scroll">{{ post.title | escape }}</a>	
+					    {% endfor %}
+
+					     {% assign default_paths = site.pages | map: "path" %}
+    {% assign page_paths = site.header_pages | default: default_paths %}
+
+					    {% for path in page_paths %}
+            {% assign my_page = site.pages | where: "path", path | first %}
+            {% if my_page.title %}
+            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+            {% endif %}
+          {% endfor %}
+
+
+		</nav>
+<!-- about -->
+
+{% include about.html %}
+
+<!-- //about-bottom -->
+<!--footer-->
+{% include footer.html %}
+<!--/footer -->
+<!-- js -->
+{% include scripts.html %}
+</body>
+</html>
