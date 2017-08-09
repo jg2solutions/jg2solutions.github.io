@@ -3,7 +3,16 @@ layout: post
 title:  "Welcome to Jekyll!"
 date:   2017-08-03 14:44:42 -0300
 categories: jekyll update
+author: Janynne Gomes
+subtitle: 'Wordpress Site'
+cover: http://localhost:4000/assets/images/t4.svg
+pic1: http://localhost:4000/assets/images/t4.svg
+pic1_title: "Teste de titulo"
+pic2: http://localhost:4000/assets/images/t4.png
+pic3: http://localhost:4000/assets/images/contact.jpg
+pic4: http://localhost:4000/assets/images/contact.jpg
 ---
+
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.

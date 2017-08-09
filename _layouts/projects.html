@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<div class="team" id="team">
+  <div class="container-fluid">
+      <h3 class="tittle">Portfolio</h3>
+      <div class="row team-row">
+          {% for post in site.posts %}
+          {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+           <div class="col-md-3 team-grids">
+            <div class="thumbnail team-w3agile">
+              <img src="{{ site.url }}/assets/images/{{ post.cover | escape }}" class="img-responsive" alt="">
+              <div class="social-icons team-icons right-w3l fotw33">
+              <div class="caption">
+                <h4>{{ post.title | escape }}</h4>
+                <p>{{ post.date | date: date_format }}</p>            
+              </div>
+                <ul class="top-links">
+                    <li><a href="#"><i class="fa fa-download"></i></a></li>
+                    <li><a class="post-link" href="{{ post.url | relative_url }}">Abrir</a></li>
+                    
+                </ul>
+              </div>
+            </div>
+          </div>
+          {% endfor %}                      
+          <div class="clearfix"> </div>
+      </div>
+  </div>
+</div>
+{% include contact.html %}

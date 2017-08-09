@@ -1,0 +1,76 @@
+---
+layout: default
+---
+<div class="about" id="about"  itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="container">
+    <h1 itemprop="name headline" class="title">Projeto</h1>
+      
+        <div class="col-md-6 about-img-w3-agileits">
+          <!--responsive-tabs-->
+          <div id="horizontalTab">
+          
+          <ul class="resp-tabs-list">
+          {% if page.pic1 %}
+          <li><img src='{{ site.url }}/assets/images/{{page.pic1}}' alt="image" style="width:141px;height:100px;" /></li>
+          {% endif %}   
+          {% if page.pic2 %}
+          <li><img src='{{ site.url }}/assets/images/{{page.pic2}}' alt="image" style="width:141px;height:100px;" /></li>
+          {% endif %}   
+          {% if page.pic3 %}
+          <li><img src='{{ site.url }}/assets/images/{{page.pic3}}' alt="image" style="width:141px;height:100px;" /></li>
+          {% endif %}   
+          {% if page.pic4 %}
+          <li><img src='{{ site.url }}/assets/images/{{page.pic4}}' alt="image" style="width:141px;height:100px;" /></li>
+          {% endif %}        
+         
+          </ul>
+
+          <div class="resp-tabs-container">
+           {% if page.pic1 %}
+            <div class="tab1">
+              <img src='{{ site.url }}/assets/images/{{page.pic1}}' alt="image" />
+              <div class="pet-info">
+                <ul>
+                  <li><span>{{ page.pic1_title }}</span></li>                
+                </ul>
+              </div>
+                <div class="clear"></div>
+            </div>
+            {% endif %}  
+
+            {% if page.pic2 %}
+            <div class="tab2">
+              <img src='{{{ site.url }}/assets/images/{{page.pic2}}' alt="image" />
+              <div class="pet-info">
+                <ul>
+                  <li><span>{{ page.pic2_title }}</span></li>                
+                </ul>
+              </div>
+                <div class="clear"></div>
+            </div>
+            {% endif %} 
+
+          </div>
+
+        </div>
+    
+      </div>
+    
+        <div class="col-md-6 agileits_works-grid">
+            <div class="wthree-text">
+             <h6 class="subheading-w3ls">{{ page.title | escape }}</h6>
+             <p class="para-w3-agileits" itemprop="author" itemscope itemtype="http://schema.org/Person">
+             <span itemprop="name">{{ page.author }}</span></p>
+             <p  class="para-w3-agileits">
+             {{ content }}
+             </p>
+          </div>
+        </div>
+
+
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+
+  </div>
+</div>
