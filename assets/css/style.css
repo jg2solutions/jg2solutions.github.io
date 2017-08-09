@@ -46,6 +46,20 @@ ul{
 label{
 	margin:0;
 }
+
+.skype-button
+{
+	float: right;
+}
+.skype-button p
+{
+	font-size:10px !important;
+	width: 100%;
+}
+.skype-button img
+{
+	margin:0px !important;
+}
 /*-- Banner --*/
 /*-- header --*/
 .top-header {
@@ -395,7 +409,7 @@ nav#cbp-spmenu-s2 h3 {
     text-transform: capitalize;
 }
 .banner-info p {
-    font-size: .9em;
+    font-size: 25px;
     font-weight: 400;
     color: #fff;
     margin-top: 0.6em;
@@ -1202,7 +1216,7 @@ div#contact h3 {
     color: #fbfafa;
 }
 .contact-agile {
-    background: url(../images/contact.jpg) no-repeat 0px 0px;
+    background: url(../images/contato.svg) no-repeat 0px 0px;
     background-size: cover;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
