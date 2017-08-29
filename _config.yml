@@ -24,6 +24,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  jg2solutions
 facebook_page:  "https://www.facebook.com/jg2solutions"
+analytics_id: "UA-105645283-1"
 
 # Build settings
 markdown: kramdown
